@@ -1,17 +1,17 @@
-package com.tang.effective.effectivejava3.Chapter2;
+package com.tang.effective.effectivejava3.chap2.item2;
+
 
 import lombok.ToString;
 
 /**
- * @Title: NutritionFacts
+ * @Title: NutritionFacts3
  * @Description:
  * @author: tangyao
- * @date: 2021/12/29 17:43 2021/12/29
+ * @date: 2022/4/1 18:12
  * @Version: 1.0
  */
-
 @ToString
-public class Item2_NutritionFacts {
+public class NutritionFacts3 {
     private final int servingSize;
     private final int servings;
     private final int calories;
@@ -19,7 +19,6 @@ public class Item2_NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
-    @ToString
     public static class Builder {
         // Required parameters
         private final int servingSize;
@@ -55,12 +54,12 @@ public class Item2_NutritionFacts {
             return this;
         }
 
-        public Item2_NutritionFacts build() {
-            return new Item2_NutritionFacts(this);
+        public NutritionFacts3 build() {
+            return new NutritionFacts3(this);
         }
     }
 
-    private Item2_NutritionFacts(Builder builder) {
+    private NutritionFacts3(Builder builder) {
         servingSize = builder.servingSize;
         servings = builder.servings;
         calories = builder.calories;
